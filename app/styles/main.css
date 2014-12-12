@@ -1,0 +1,123 @@
+body {
+	background: #fafafa;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333;
+}
+
+#player-wrap {
+	width: 100%;
+	min-height: 260px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+
+  -webkit-transition: all 0.4s ease-out;
+          transition: all 0.4s ease-out;
+
+}
+@media screen and (min-width: 240px){
+	#player-wrap {
+		height: 260px;
+	}
+}
+@media screen and (min-width: 540px){
+	#player-wrap {
+		height: 482px;;
+	}
+}
+iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border: none;
+	z-index: 1;
+}
+.video-splash {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000 url('../images/paralax-bg-videosection.jpg') no-repeat center center;
+	background-size: cover;
+	z-index: 3;
+}
+.custom-controlls {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+
+	.no-touch .custom-controlls:hover,
+	.no-touch .custom-controlls.video-paused {
+		opacity: 1;
+	}
+
+#player-wrap button {
+	border: none;
+	-webkit-appearance: none;
+	display: inline-block;
+	outline: none;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+@media screen and (min-width: 240px){
+	#player-wrap button {
+		height: 66px;
+		width: 70px;
+	}
+}
+@media screen and (min-width: 540px){
+	#player-wrap button {
+		height: 89px;
+		width: 89px;
+	}
+}
+#player-wrap button.main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+#player-wrap button.sub {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+}
+button.play {
+	background: url('../images/playicon.png');
+}
+button.pause{
+	background: url('../images/pauseicon.png');
+}
+button.mute {
+	background: url('../images/muteicon.png');
+}
+button.unMute {
+	background: url('../images/volumeicon.png');
+}
+.video-splash-controlls {
+	text-align: center;
+	color: #fff;
+	font-size: 2em;
+	height: 89px;
+	top: 50%;
+	position: absolute;
+	width: 100%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.video-splash-controlls span {
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}

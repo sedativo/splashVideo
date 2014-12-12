@@ -1,0 +1,63 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>splashVideo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+         <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <section id="player-wrap">
+            <div class="video-splash">
+                <div class="video-splash-controlls">
+                    <span>Watch</span>
+                    <button id="init-video" class="play" data-type="play"></button>
+                    <span>Video</span>
+                </div>
+            </div>
+            <div class="custom-controlls">
+                <button data-type="play" data-player-event="play" class="play main"></button>
+                <button data-type="mute" data-player-event="0" class="mute sub"></button>
+            </div>
+            <iframe id="player1" src="//player.vimeo.com/video/113013578" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <!--<script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>-->
+        </section>
+
+
+
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+        <script defer>
+              window.onload = function(){
+                  VPlayer.init();
+              };
+        </script>
+</body>
+</html>
